@@ -1,0 +1,68 @@
+Updating npm: npm install -g npm
+
+Installing angular: npm install -g @angular/cli@latest
+
+Updating the CLI: npm uninstall -g angular-cli @angular/cli 
+
+                  npm cache verify 
+
+                  npm install -g @angular/cli
+
+
+To run: ng serve
+
+
+
+
+
+
+
+
+
+
+
+
+Tool needed: NodeJs
+
+Create project: ng new my-first-app --no-strict
+(Strict mode is a special mode in which we can create our projects)
+
+
+There are a couple of files that need to be converted before they can run in the browser
+and the CLI does all of that and it also heavily optimizes our code
+so that we ship a highly optimized code version to the browser once we finally deploy our app,
+
+
+NodeJS will be used behind the scenes by the CLI to bundle and optimize our project
+and we'll use npm, the Node Package Manager to manage the different dependencies
+an Angular project has.
+
+
+Angular uses TypeScript: a super set of JavaScript.
+It allows us to mix static HTML code and dynamic things we want to output in that code and actually,
+
+
+ngModel in square brackets and parentheses on the input and set it equal to name.
+So, to the same name you're outputting here.
+Now this is a so-called directive and what it does is it basically tells Angular to listen to anything
+you enter here and store it in this name property, in this name model, but also on the other hand, output
+the value of the name model in this input.
+
+
+
+-------------------task-------------------
+<input type="text" [(ngModel)]="name">
+<p>{{name}}</p>
+gets error
+
+
+So somehow Angular doesn't understand ngModel.
+app.module.ts file: This is basically where we tell Angular which pieces belong to our app and there we have
+
+
+add these lines in app.module.ts
+import { FormsModule} from '@angular/forms'
+imports: [
+  BrowserModule,
+  FormsModule
+],
