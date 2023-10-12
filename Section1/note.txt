@@ -24,7 +24,7 @@ To run: ng serve
 
 Tool needed: NodeJs
 
-Create project: ng new my-first-app --no-strict
+Create project: ng new my-first-app --no-strict   /    ng new my-project --strict false
 (Strict mode is a special mode in which we can create our projects)
 
 
@@ -66,3 +66,58 @@ imports: [
   BrowserModule,
   FormsModule
 ],
+
+
+
+
+TypeScript
+-------------
+
+TypeScript really is just a super set to JavaScript.
+It offers more features than vanilla JavaScript like classes, interfaces, and very important which 
+gives it the name, types, strong typing, so you define in TypeScript if a certain variable is a number, a string or something else.
+
+we don't do this thing in vanillajs there we have dynamic typing.
+You can have a string variable and then you assign a number and that's totally fine.
+That won't work in TypeScript, it will give you an error
+
+it allows you to write much more robust code which gets checked at the time you write it
+and not just at the time you run it, a great enhancement.
+
+IMP----------------
+TypeScript doesn't run in the browser, so it is compiled to JavaScript in the end
+and this compilation is handled by the CLI.
+One of the reasons why we need the CLI why we need a project management tool like the CLI.
+this compilation is really fast and therefore in the end, in the browser,
+JavaScript is going to run.
+
+
+
+TypeScript is an addition to JavaScript
+not a complete replacement, so a lot of the commands will look really familiar
+
+
+
+TypeScript  (More features than vanilla Js e.g.. types, classes, interfaces,...)
+    |
+    |
+    ↓
+JavaScript
+
+
+
+Bootrstrap installation
+
+npm install bootstrap --save
+
+to use bootstrap go to angular.json file(configures cli project)
+
+another import
+prior to that "src/styles.css" import so that we could overwrite it within this file.
+
+add this in styles array
+"node_modules/bootstrap/dist/css/bootstrap.min.css" 
+
+re run ng serve
+
+
