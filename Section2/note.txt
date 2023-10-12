@@ -1,0 +1,82 @@
+index.html file is served by the server.
+
+Angular is a framework which allows you to create single page application.
+
+app-root here of course is not a default HTML element instead, is one of our own components.
+
+
+whenever this NG serve process rebuilds our project, it will create bundles, JavaScript script bundles,
+and automatically add the right imports in the index html file.
+A little convenience functionality for us. So in the final file, these script imports here are present,
+and these script imports will contain our own code too.
+
+So, these script files are therefore executed, and they're actually the first code to be executed,
+and that is just something you have to keep in mind is the code we write in our main.ts file.
+That is why it's called main.
+main.ts file
+
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((err) => console.error(err));
+
+now Bootstraps starts our Angular application by passing an app.module to this method,
+
+
+
+in app.module.ts
+
+bootstrap array: which basically lists all the components
+
+In this module, we tell Angular, Hey, there is this AppComponent which you should know when you try to start yourself.
+
+
+
+Component---------------------
+Components are a key feature in Angular. You build your whole application by composing it
+from a couple of components, which you create on your own.
+
+Each component has its own template, its own HTML code, maybe its own styling, and more importantly also its own business logic.
+
+It allows you to split up your complex application, your complex webpage into reusable parts.
+You may use a component more than once
+
+
+add another components in the app root component
+
+a component simply is just a class, a TypeScript class. So that Angular is able to instantiate it
+to create objects based on the blueprint we set up here,
+
+we should add something to it, which tells Angular that this is not only a normal TypeScript class
+but instead something special, a component. We do this by adding a special decorator.
+Decorators are a TypeScript feature which allow you to enhance your classes, for example.(enhance elements you use)
+
+It's the component decorator. And decorators are always attached by adding an at sign in front of them.
+
+
+we need to pass a JavaScript object to this component decorator to configure it
+because without any configuration it's still not that valuable to Angular.
+
+
+by default, Angular will not scan all your files here. So if you don't tell it that the server component exists
+it doesn't know it, just creating the file is not enough. That is why we have to register it here in the NG module to tell Angular,
+
+We do register new components in this declarations array.
+
+
+Imports simply allows us to add some other modules to this module because I told you
+you can split up your app into multiple modules and then you can import this modules to basically
+
+
+CLI command to also create a new component------
+
+ng generate component servers      /   ng g c servers
+
+
+
+also update the app module.
+Now the CLI should do this automatically which is why you already find the import and the declaration
+
+
+
+a link to external template or just template to define it in this file.
+But each component needs to have a template. This is the one property you have to have at all times.
