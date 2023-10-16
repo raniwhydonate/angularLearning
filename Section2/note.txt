@@ -80,3 +80,8 @@ Now the CLI should do this automatically which is why you already find the impor
 
 a link to external template or just template to define it in this file.
 But each component needs to have a template. This is the one property you have to have at all times.
+
+
+
+You can't combine style URLs and styles You must only have one template.
+You may have multiple style files or style definitions and you can choose between inline and external file.
