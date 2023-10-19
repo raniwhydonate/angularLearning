@@ -85,3 +85,136 @@ But each component needs to have a template. This is the one property you have t
 
 You can't combine style URLs and styles You must only have one template.
 You may have multiple style files or style definitions and you can choose between inline and external file.
+
+
+
+
+COMPONENT SELECTOR----------------------
+
+We select the app servers element by just typing app servers here. So that actually works like a css selector
+and therefore you are not limited to selecting by element. You could put this into square brackets
+to use the attribute selector. So in css you can select elements by attribute, by enclosing that attribute
+in square brackets. And now if you save this you would see that our app actually is broken.
+Because if we have a look at the error message, app servers is a unknown element because now
+our code Angular doesn't recognize app servers anymore because we changed the selector to be an attribute.
+So to make this work again, we would have to comment this out or remove it and maybe add a div
+or any other element, a normal HTML element which has a app servers attribute now.
+Now with this custom attribute added now, now the app works again because now Angular selects the element
+by attribute and not by the element itself
+
+
+selecting by ID won't work, that's not supported by Angular.
+And all those pseudo selectors like hover and so on also don't work.
+
+
+
+
+DATABINDING----------------------------
+
+databinding = communication
+(Communication between your TypeScript code of your component, your business logic, and the template)
+
+
+                            Output Data
+TypeScript code             ------->                    Template (HTML)
+(BUsness logic)         String Interpolation({{data}})   
+                        Property Binding([property]="data")
+
+                              React to(User) Events  
+                                 <-----------
+                          Event Binding((event)="expresion)
+          Combination of Both: Two-Way-Binding([(ngModel)]='data')
+
+
+
+PROPERTY BINDING----------------------------------
+
+Square brackets indicate to angular that we're using property binding
+that we want to dynamically bind some property and disabled the HTML attribute.
+
+With the square brackets, we are directly binding to this native disabled property this HTML element has.
+
+
+
+
+
+PROPERTY BINDING VS STRING INTERPOLATION----------------------
+
+if you want to output something in your template print some text to it, use string and interpolation.
+If you want to change some property, be that of an HTML element or of a directive
+or a component, typically use property binding.
+
+
+one important note
+don't mix property binding and string interpolation.
+
+
+String interpolation only works in a normal template not within another expression of that template
+not within property binding or something like this.
+
+
+EVENT BINDING-----------------------
+
+Parentheses are the signal that we're using event binding.
+
+
+PASSING AND USING DATA WITH EVENT BINDING----------------
+
+dollar sign event, super important s kind of a reserved variable name you can use
+in the template when using event binding.
+
+dollar sign event will simply be the data emitted with that event.
+
+
+
+Two-Way-Binding!---------------------------
+
+to enable the ngModel  directive. This is done by adding the FormsModule  to the imports[]  array in the AppModule.
+You then also need to add the import from @angular/forms  in the app.module.ts file:
+import { FormsModule } from '@angular/forms';
+
+With two-way data binding, we combine property and event binding.
+
+
+
+
+COMBINING all forms of DATABINDING---------------------
+
+
+
+WHAT ARE DIRECTIVES?-----------------------------------
+
+Directives are instructions in the DOM
+Components are kind of such instructions in the DOM.
+
+
+USE OF ngIf------------------
+
+directive shipping helps for conditional rendering
+
+the star is required because NG if is a structural directive
+which means it changes the structure of our dom.
+It either adds this element or it doesn't add it.
+
+
+star at the beginning indicates that this is a structural directive
+really changing the dome as you just saw.
+
+enhancing ngIf with an else condition -------
+
+NG template.
+
+That is a component, a directive shipping, with Angular which you can use to mark places in the dom.
+
+
+ngIf was a structural directive.
+The other type of directives are attribute directives, which are called like this
+"Unlike structural directives, attribute directives dont add or remove elements.
+They only change the element they were placed on"
+because they really just look like normal HTML attributes without a star
+
+
+ngStyle- built in directive.
+
+The directive name is just ngStyle. The square brackets indicate
+that we want to bind to some property on this directive.
