@@ -11,14 +11,9 @@ Updating the CLI: npm uninstall -g angular-cli @angular/cli
 
 To run: ng serve
 
+CLI command to also create a new component------
 
-
-
-
-
-
-
-
+ng generate component servers
 
 
 
