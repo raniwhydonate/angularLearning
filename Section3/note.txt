@@ -1,0 +1,12 @@
+ng new foodapp --no-strict --routing false --standalone false
+npm install --save bootstrap@3
+ng g c recipes
+
+
+
+
+A model simply is a TypeScript file.
+
+
+
+A model in the end should just be a blueprint for objects we create.
