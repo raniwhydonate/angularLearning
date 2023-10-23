@@ -1,0 +1,18 @@
+Angular gives us great tools to implement this flow. We can use property and event binding not only on HTML elements
+and their native properties and events as we did thus far.
+We can also use it on directives and we also did this with ngclass and  ngStyle that we use property binding.
+But and that is important, we can also use it on our own components and bind
+to our own custom properties and custom events. We can emit our own events.
+
+
+________________________________        ________________________________    ________________________________
+HTML Elements                  |        |          Directives          |   |         Components            |
+                               |        |                              |   |                               |
+Native Properties & Events     |        |  Custom Properties & Events  |   |  Custom Properties & Events   |
+--------------------------------        --------------------------------    --------------------------------
+
+
+
+
+
+
