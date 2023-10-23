@@ -12,7 +12,10 @@ Native Properties & Events     |        |  Custom Properties & Events  |   |  Cu
 --------------------------------        --------------------------------    --------------------------------
 
 
+EventEmitter is a generic type,which is indicated in TypeScript
+by using this smaller than and greater than sign. And in between you simply define the type
+of event data you're going to emit.
 
-
-
+EventEmitter is an object in the angular framework
+which allows you to emit your own events.
 
