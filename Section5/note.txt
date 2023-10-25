@@ -19,3 +19,36 @@ of event data you're going to emit.
 EventEmitter is an object in the angular framework
 which allows you to emit your own events.
 
+
+
+
+
+while of course these CSS files have the goal of encapsulating styles for the component they belong to,
+this, again, is not a default behavior, Angular gives us this behavior.
+
+
+
+
+you can override this encapsulation though.
+back to the server element component
+you can add something to the ad component decorator.
+It's called encapsulation this property.
+
+
+  encapsulation: ViewEncapsulation.None
+
+we don't see these strange attributes being added to our elements.
+this component doesn't use ViewEncapsulation
+
+The other components still will use it there. You still see these attributes but if you now
+define any styles for this component in these CSS file of this component they will actually get applied globally.
+
+
+This is called "ShadowDom" instead of "Native" now - the functionality is the same though.
+72. video   IMP for styling
+
+
+
+remove the two-way binding.
+There and the other option we would have is to place a local reference on that element.
+A local reference can be placed on any HTML element,
