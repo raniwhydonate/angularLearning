@@ -52,3 +52,43 @@ This is called "ShadowDom" instead of "Native" now - the functionality is the sa
 remove the two-way binding.
 There and the other option we would have is to place a local reference on that element.
 A local reference can be placed on any HTML element,
+
+
+
+Everything you place between the opening and closing tag of your own component is lost by default.
+It's simply removed from the dom.
+
+<ng-content>
+A special directive you can add in these server element components template.
+it still is a directive just using
+
+this element like selector, and this serves as a hook you can place in your component
+to mark the place for Angular where it should add any content it finds
+between the opening and closing tag here.
+
+it's more complex HTML code property binding really is not the best solution
+because Angular will escape HTML texts there to prevent cross sites scripting attacks from happening.
+
+
+
+NgOnInit is a lifecycle hook
+
+
+
+
+lifecycle
+------------
+ngOnChanges - Called after a bound input property changes    
+ngOnInit - Called once the component is initialized
+ngDoCheck - Called during every change detection run
+ngAfterContentInit - Called after content (ng-content) has been projected into view
+ngAfterContentChecked - called every time the projected content has been checked 
+ngAfterViewInit - Called after the component's view (and child views) has been checked
+ngAfterViewChecked - called every time the view (and child views) have been checked
+ngOnDestroy - called once the component is about to be destroyed.
+
+
+
+
+IMP================lifecycle hook in action 78.
+
