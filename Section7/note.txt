@@ -1,0 +1,62 @@
+the difference between attribute and structural directives, and what this star means on the structural directives.
+
+We got attribute and structural directives.
+
+Attribute directives are called like this because they sit on elements, Just like attributes,
+and structural directives basically do the same, but they also change the structure
+of the DOM around this element.
+
+If you have ngIf on a paragraph, if that condition is false, this paragraph is removed from the DOM,
+so the overall view container is affected,
+whereas on the attribute directive, you never destroy an element from the DOM,
+you only change properties of that element, for example, the background color.
+
+So, that is why we have attribute directives only affecting the element they sit on,
+and structural directives, which also affect the whole DOM or the view container,
+the area around the element which they were placed on.
+
+
+
+Attribute Directives
+
+Look like a normal HTML Attribute
+(possibly with a databinding or event binding)
+
+Only affect/change the element they are added to
+
+
+Structural Directives
+
+Look like a normal HTML Attribute but have a 
+leading * (for desugarging)
+
+Affect a whole area in the DOM
+(elements get added/removed)
+
+
+
+
+ng g d better-highlight
+command to generate directive
+
+
+
+imp 94
+
+
+
+star indicates to Angular that this is a structural directive.
+
+
+
+
+There is only property binding, event binding,
+
+two-way binding, and string interpolation,
+
+
+ng-template
+
+is an element which itself is not rendered, but which allows us to define a template
+in the end for Angular to use once it determines that this template,
+some element, needs to be rendered, because this condition is true in this case.
