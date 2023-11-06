@@ -1,0 +1,31 @@
+A Service is just a normal TypeScript class.
+
+
+
+
+
+
+AppModule - Same Instance of Service is available Application-wide
+AppComponent - Same Instance of Service is available for all Components(but not for other Services)
+Any other Component - Same Instance of Service is available for the Component and all its child components.
+
+
+
+A Different way of injecting Services
+
+Instead of adding a service class to the providers[]  array in AppModule , you can set the following config in @Injectable() :
+
+@Injectable({providedIn: 'root'})
+export class MyService { ... }
+This is exactly the same as:
+
+export class MyService { ... }
+and
+
+import { MyService } from './path/to/my.service';
+ 
+@NgModule({
+    ...
+    providers: [MyService]
+})
+export class AppModule { ... }
