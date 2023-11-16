@@ -1,0 +1,5 @@
+specific directive to set the class of active link
+
+routerLinkActive='classname'
+
+to all list items
