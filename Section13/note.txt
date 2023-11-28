@@ -1,0 +1,61 @@
+An observable basically can be thought of as a data source.
+
+observable
+Various Data Sources
+(User input)Events, Http Requests, Triggered in Code, ...
+
+
+Obeserver
+You write the Code
+which gets executed -------->  data, handle error, handle Completion
+
+
+
+u use it to handle asynchronous tasks, because all these data sources here,
+user events, triggered in your code or a HTTP request, are asynchronous tasks.
+You don't know when they will happen and you don't know how long they will take.
+So if you execute your normal application code, you don't want to wait for these events
+or you don't want to wait for the completion of such a HTTP request
+because that would block your program, would block your logic.
+Therefore, we'd need methods of handling such asynchronous tasks.
+
+
+npm install --save rxjs@6
+
+npm install --save rxjs-compat
+
+
+
+observable
+    |
+operators
+    |
+subscription
+    |
+Obeserver
+
+
+
+sometimes you don't need the raw data.
+You might want to transform it or filter
+out certain data points and of course you could do all
+of that inside of your subscription
+or in the function you pass to your subscription.
+
+But there is a more elegant way.
+Instead of setting up that subscription like this
+you can use builtin operators in between.
+That means that the data points, first of all
+reach these operators that do something
+
+
+
+
+operators that they allow you to build up a chain
+of steps you want to funnel your observable data through.
+
+
+
+
+use subjects to communicate across components, through services so through a mechanism where
+you in the end subscribe to somewhere, like here in the app component.
